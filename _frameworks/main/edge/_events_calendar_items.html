@@ -1,0 +1,34 @@
+<script>
+clEventsCalendar.setData({
+    urlPage:'{url_page_calendar}',
+    selectMonth:'{calendar_month}'*1,
+    selectYear:'{calendar_year}'*1
+});
+</script>
+<script class="script_events_items">
+var eventsItems=[
+    <!-- begin_day -->
+    <!-- begin_event -->
+    {eventName: clEventsCalendar.getHtmlEventItem('{event_id}', '{event_user_name_js}', '{event_user_url}', '{event_user_photo}', '{event_user_is_online}', '{event_title_js}', '{event_description_js}', '{event_time}', 0, 0, '{event_user_uid}', '{event_edit_url}'),
+     date:'{event_datetime_day}',
+     calendar: 'Work', color: '<!-- begin_my_event_class -->my_event_color<!-- end_my_event_class --><!-- begin_other_event_class -->other_event_color<!-- end_other_event_class -->'},
+    <!-- end_event -->
+
+    <!-- begin_day_action -->
+    {eventName: clEventsCalendar.getHtmlEventItem(0, '', '', '', '', '{event_title_js}', '', '', '{events_num}', '{url_create_new_item}'),
+     date:'{event_datetime_day}',
+     calendar: 'Work', color: ''},
+    <!-- end_day_action -->
+    <!-- end_day -->
+];
+<!-- begin_set_events -->
+if(typeof clCalendar=='object'){
+    clCalendar.setEvents(eventsItems);
+}
+<!-- end_set_events -->
+<!-- begin_add_events -->
+if(typeof clCalendar=='object'){
+    clCalendar.addEvents(eventsItems, '{event_datetime_day}');
+}
+<!-- end_add_events -->
+</script>

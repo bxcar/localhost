@@ -1,0 +1,14 @@
+<div id="events_calendar" class="events_calendar"></div>
+{items}
+<script>
+    //var months='{j_calendar_month}'.replace(/'/gi,'').split(',');
+    var months=[
+        '{j_january}', '{j_february}', '{j_march}', '{j_april}', '{j_may}', '{j_june}', '{j_july}',
+        '{j_august}', '{j_september}', '{j_october}', '{j_november}', '{j_december}'
+    ];
+    var weekdaysShort= [
+        '{j_sun}', '{j_mon}', '{j_tue}', '{j_wed}', '{j_thu}', '{j_fri}', '{j_sat}'
+    ];
+    var clCalendar = new Calendar('#events_calendar', months, weekdaysShort, eventsItems, '{calendar_init_date}', '{calendar_init_day}');
+</script>
+<div id="events_calendar_data" class="events_calendar_data"></div>

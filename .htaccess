@@ -1,0 +1,277 @@
+#php_flag register_globals off
+#php_value upload_max_filesize 30M
+#php_value post_max_size 30M
+
+DirectoryIndex index.php index.html index.htm
+
+Options -MultiViews
+Options -Indexes
+
+RewriteEngine on
+
+### Uncomment if error 404/500
+#RewriteBase /
+
+### Redirect site.com to www.site.com
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L,QSA]
+
+### Redirect HTTP to HTTPS
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,QSA]
+
+RewriteRule ^(.*/)*\.svn/ / [F,L]
+
+# For old mobile app to check internet connection
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^_files/favicon.ico _files/favicon_all.ico [L,QSA]
+
+RewriteRule ^search_results$ search_results.php [L,QSA]
+RewriteRule ^encounters$ search_results.php?display=encounters [L,QSA]
+RewriteRule ^rate_people$ search_results.php?display=rate_people [L,QSA]
+RewriteRule ^wall_liked/([0-9]+)$ search_results.php?base_seo_url=1&show=wall_liked&wall_item_id=$1 [L,QSA]
+RewriteRule ^wall_liked_comment/([0-9]+)$ search_results.php?base_seo_url=1&show=wall_liked_comment&comment_id=$1 [L,QSA]
+RewriteRule ^wall_shared/([0-9]+)$ search_results.php?base_seo_url=1&show=wall_shared&wall_shared_item_id=$1 [L,QSA]
+
+RewriteRule ^photo_liked/([0-9]+)$ search_results.php?base_seo_url=1&show=photo_liked&photo_id=$1 [L,QSA]
+RewriteRule ^photo_liked_comment/([0-9]+)$ search_results.php?base_seo_url=1&show=photo_liked_comment&comment_id=$1 [L,QSA]
+
+RewriteRule ^video_liked/([0-9]+)$ search_results.php?base_seo_url=1&show=video_liked&video_id=$1 [L,QSA]
+RewriteRule ^video_liked_comment/([0-9]+)$ search_results.php?base_seo_url=1&show=video_liked_comment&comment_id=$1 [L,QSA]
+
+
+RewriteRule ^wall$ wall.php [L,QSA]
+RewriteRule ^city$ city.php?place=city [L,QSA]
+RewriteRule ^general_chat$ general_chat.php [L,QSA]
+RewriteRule ^moderator$ moderator.php [L,QSA]
+RewriteRule ^upgrade$ upgrade.php [L,QSA]
+RewriteRule ^user_block_list$ user_block_list.php [L,QSA]
+RewriteRule ^my_friends$ my_friends.php [L,QSA]
+RewriteRule ^friends_list$ my_friends.php [L,QSA]
+RewriteRule ^mutual_attractions$ mutual_attractions.php [L,QSA]
+RewriteRule ^users_viewed_me$ users_viewed_me.php [L,QSA]
+RewriteRule ^mail_whos_interest$ mail_whos_interest.php [L,QSA]
+RewriteRule ^users_rated_me$ users_rated_me.php [L,QSA]
+RewriteRule ^increase_popularity$ increase_popularity.php [L,QSA]
+RewriteRule ^profile_settings$ profile_settings.php [L,QSA]
+RewriteRule ^join$ join.php [L,QSA]
+RewriteRule ^m/join$ m/join.php [L,QSA]
+RewriteRule ^login$ join.php?cmd=please_login [L,QSA]
+RewriteRule ^m/login$ m/join.php?cmd=please_login [L,QSA]
+RewriteRule ^forget_password$ forget_password.php [L,QSA]
+RewriteRule ^index$ index.php [L,QSA]
+RewriteRule ^m/index$ m/index.php [L,QSA]
+RewriteRule ^profile_view$ profile_view.php [L,QSA]
+RewriteRule ^page$ page.php [L,QSA]
+RewriteRule ^messages$ messages.php [L,QSA]
+RewriteRule ^contact$ contact.php [L,QSA]
+RewriteRule ^about$ about.php [L,QSA]
+RewriteRule ^games$ games.php [L,QSA]
+RewriteRule ^m/games$ m/games.php [L,QSA]
+RewriteRule ^join2$ join2.php [L,QSA]
+RewriteRule ^private_photo_access$ my_friends.php [L,QSA]
+RewriteRule ^terms$ info.php?page=term_cond [L,QSA]
+RewriteRule ^privacy_policy$ info.php?page=priv_policy [L,QSA]
+RewriteRule ^m/terms$ m/info.php?page=term_cond [L,QSA]
+RewriteRule ^m/privacy_policy$ m/info.php?page=priv_policy [L,QSA]
+RewriteRule ^m/forgot_password$ m/forgot_password.php [L,QSA]
+RewriteRule ^email_not_confirmed$ email_not_confirmed.php [L,QSA]
+RewriteRule ^m/profile_view$ m/profile_view.php [L,QSA]
+RewriteRule ^m/search_results$ m/search_results.php [L,QSA]
+RewriteRule ^m/upgrade$ m/upgrade.php [L,QSA]
+RewriteRule ^m/profile_boost$ m/upgrade.php?action=refill_credits&service=search [L,QSA]
+RewriteRule ^m/refill_credits$ m/upgrade.php?action=refill_credits [L,QSA]
+RewriteRule ^audiochat$ audiochat.php [L,QSA]
+RewriteRule ^videochat$ videochat.php [L,QSA]
+RewriteRule ^m/audiochat$ m/audiochat.php [L,QSA]
+RewriteRule ^m/videochat$ m/videochat.php [L,QSA]
+
+RewriteRule ^m/users_viewed_me$ m/users_viewed_me.php [L,QSA]
+RewriteRule ^m/profile_settings$ m/profile_settings.php [L,QSA]
+RewriteRule ^m/messages$ m/messages.php [L,QSA]
+RewriteRule ^m/hot_or_not$ m/search_results.php?display=encounters [L,QSA]
+RewriteRule ^hot_or_not$ search_results.php?display=encounters [L,QSA]
+RewriteRule ^m/private_photo_access$ m/my_friends.php [L,QSA]
+RewriteRule ^m/my_friends$ m/my_friends.php [L,QSA]
+
+RewriteRule ^street_chat$ city.php?place=street_chat [L,QSA]
+RewriteRule ^3d_labyrinth$ city.php?place=3d_labyrinth  [L,QSA]
+RewriteRule ^3d_tic_tac_toe$ city.php?place=3d_tic_tac_toe  [L,QSA]
+RewriteRule ^3d_connect_four$ city.php?place=3d_connect_four  [L,QSA]
+RewriteRule ^3d_chess$ city.php?place=3d_chess  [L,QSA]
+RewriteRule ^3d_giant_checkers$ city.php?place=3d_giant_checkers  [L,QSA]
+RewriteRule ^3d_sea_battle$ city.php?place=3d_sea_battle  [L,QSA]
+RewriteRule ^3d_reversi$ city.php?place=3d_reversi  [L,QSA]
+RewriteRule ^3d_hoverboard_racing$ city.php?place=3d_hoverboard_racing  [L,QSA]
+RewriteRule ^3d_space_racing$ city.php?place=3d_space_racing  [L,QSA]
+RewriteRule ^3d_space_labyrinth$ city.php?place=3d_space_labyrinth  [L,QSA]
+
+RewriteRule ^street_chat_([a-z0-9_-]+)$ city.php?place=$1 [L,QSA]
+RewriteRule ^3d/([a-z0-9_-]+)$ _server/city_js/index.php?seo_url=1&place=$1 [L,QSA]
+RewriteRule ^m/3d/([a-z0-9_-]+)$ _server/city_js/index.php?view=mobile&place=$1 [L,QSA]
+
+RewriteRule ^who_likes_you$ mutual_attractions.php?cmd=who_likes_you [L,QSA]
+RewriteRule ^m/who_likes_you$ m/mutual_attractions.php?display=who_likes_you [L,QSA]
+RewriteRule ^whom_you_like$ mutual_attractions.php?cmd=whom_you_like [L,QSA]
+RewriteRule ^m/whom_you_like$ m/mutual_attractions.php?display=whom_you_like [L,QSA]
+RewriteRule ^mutual_likes$ mutual_attractions.php [L,QSA]
+RewriteRule ^m/mutual_likes$ m/mutual_attractions.php [L,QSA]
+RewriteRule ^social_network_info$ info.php?page=social_network_info [L,QSA]
+RewriteRule ^blogs_list$ blogs_list.php [L,QSA]
+RewriteRule ^blogs_add$ blogs_add.php [L,QSA]
+
+RewriteRule ^favorite_list$ favorite_list.php [L,QSA]
+
+RewriteRule ^group_add$ group_add.php [L,QSA]
+RewriteRule ^page_add$ group_add.php?view=group_page [L,QSA]
+
+RewriteRule ^group_edit/$ group_add.php?base_seo_url=1&cmd=edit&group_id=0 [L,QSA]
+RewriteRule ^group_edit/([0-9]+)$ group_add.php?base_seo_url=1&cmd=edit&group_id=$1 [L,QSA]
+RewriteRule ^page_edit/$ group_add.php?base_seo_url=1&cmd=edit&view=group_page&group_id=0 [L,QSA]
+RewriteRule ^page_edit/([0-9]+)$ group_add.php?base_seo_url=1&cmd=edit&view=group_page&group_id=$1 [L,QSA]
+
+RewriteRule ^photos$ photos_list.php [L,QSA]
+RewriteRule ^photos/$ photos_list.php?base_seo_url=1&page=1 [L,QSA]
+RewriteRule ^photos/([0-9]+)$ photos_list.php?base_seo_url=1&page=$1 [L,QSA]
+
+RewriteRule ^photos_pages$ photos_list.php?view_list=group_page [L,QSA]
+RewriteRule ^photos_pages/$ photos_list.php?base_seo_url=1&view_list=group_page&page=1 [L,QSA]
+RewriteRule ^photos_pages/([0-9]+)$ photos_list.php?base_seo_url=1&view_list=group_page&page=$1 [L,QSA]
+
+RewriteRule ^photos_groups$ photos_list.php?view_list=group [L,QSA]
+RewriteRule ^photos_groups/$ photos_list.php?base_seo_url=1&view_list=group&page=1 [L,QSA]
+RewriteRule ^photos_groups/([0-9]+)$ photos_list.php?base_seo_url=1&view_list=group&page=$1 [L,QSA]
+
+#RewriteRule ^(.*)/photos$ photos_list.php?base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+#RewriteRule ^(.*)/photos/$ photos_list.php?base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+#RewriteRule ^(.*)/photos/([0-9]+)$ photos_list.php?base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/photos$ router.php?router_page=photos_list&base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/photos/$ router.php?router_page=photos_list&base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/photos/([0-9]+)$ router.php?router_page=photos_list&base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/photos_my_pages$ router.php?router_page=photos_list&base_seo_url=1&view_list=group_page&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/photos_my_pages/$ router.php?router_page=photos_list&base_seo_url=2&view_list=group_page&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/photos_my_pages/([0-9]+)$ router.php?router_page=photos_list&base_seo_url=2&view_list=group_page&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/photos_my_groups$ router.php?router_page=photos_list&base_seo_url=1&view_list=group&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/photos_my_groups/$ router.php?router_page=photos_list&base_seo_url=2&view_list=group&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/photos_my_groups/([0-9]+)$ router.php?router_page=photos_list&base_seo_url=2&view_list=group&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^vids$ vids_list.php [L,QSA]
+RewriteRule ^vids/$ vids_list.php?base_seo_url=1&page=1 [L,QSA]
+RewriteRule ^vids/([0-9]+)$ vids_list.php?base_seo_url=1&page=$1 [L,QSA]
+
+RewriteRule ^vids_pages$ vids_list.php?view_list=group_page [L,QSA]
+RewriteRule ^vids_pages/$ vids_list.php?base_seo_url=1&view_list=group_page&page=1 [L,QSA]
+RewriteRule ^vids_pages/([0-9]+)$ vids_list.php?base_seo_url=1&view_list=group_page&page=$1 [L,QSA]
+
+RewriteRule ^vids_groups$ vids_list.php?view_list=group [L,QSA]
+RewriteRule ^vids_groups/$ vids_list.php?base_seo_url=1&view_list=group&page=1 [L,QSA]
+RewriteRule ^vids_groups/([0-9]+)$ vids_list.php?base_seo_url=1&view_list=group&page=$1 [L,QSA]
+
+#RewriteRule ^(.*)/vids$ vids_list.php?base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+#RewriteRule ^(.*)/vids/$ vids_list.php?base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+#RewriteRule ^(.*)/vids/([0-9]+)$ vids_list.php?base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/vids$ router.php?router_page=vids_list&base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/vids/$ router.php?router_page=vids_list&base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/vids/([0-9]+)$ router.php?router_page=vids_list&base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/vids_my_pages$ router.php?router_page=vids_list&base_seo_url=1&view_list=group_page&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/vids_my_pages/$ router.php?router_page=vids_list&base_seo_url=2&view_list=group_page&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/vids_my_pages/([0-9]+)$ router.php?router_page=vids_list&base_seo_url=2&view_list=group_page&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/vids_my_groups$ router.php?router_page=vids_list&base_seo_url=1&view_list=group&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/vids_my_groups/$ router.php?router_page=vids_list&base_seo_url=2&view_list=group&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/vids_my_groups/([0-9]+)$ router.php?router_page=vids_list&base_seo_url=2&view_list=group&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/friends$ friends_list.php?base_seo_url=1&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/friends/$ friends_list.php?base_seo_url=2&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/friends/([0-9]+)$ friends_list.php?base_seo_url=2&name_seo=$1&offset=$2 [L,QSA]
+
+RewriteRule ^(.*)/friends_online$ friends_list_online.php?base_seo_url=1&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/friends_online/$ friends_list_online.php?base_seo_url=2&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/friends_online/([0-9]+)$ friends_list_online.php?base_seo_url=2&name_seo=$1&offset=$2 [L,QSA]
+
+RewriteRule ^(.*)/liked$ router.php?router_page=groups_social_subscribers&base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/liked/$ router.php?router_page=groups_social_subscribers&base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/liked/([0-9]+)$ router.php?router_page=groups_social_subscribers&base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/subscribers$ router.php?router_page=groups_social_subscribers&base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/subscribers/$ router.php?router_page=groups_social_subscribers&base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/subscribers/([0-9]+)$ router.php?router_page=groups_social_subscribers&base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^(.*)/block_list$ router.php?router_page=groups_social_block_list&base_seo_url=1&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/block_list/$ router.php?router_page=groups_social_block_list&base_seo_url=2&name_seo=$1&page=1 [L,QSA]
+RewriteRule ^(.*)/block_list/([0-9]+)$ router.php?router_page=groups_social_block_list&base_seo_url=2&name_seo=$1&page=$2 [L,QSA]
+
+RewriteRule ^groups$ groups_list.php [L,QSA]
+RewriteRule ^groups/$ groups_list.php?base_seo_url=1&page=1 [L,QSA]
+RewriteRule ^groups/([0-9]+)$ groups_list.php?base_seo_url=1&page=$1 [L,QSA]
+
+RewriteRule ^pages$ groups_list.php?view=group_page [L,QSA]
+RewriteRule ^pages/$ groups_list.php?base_seo_url=1&view=group_page&page=1 [L,QSA]
+RewriteRule ^pages/([0-9]+)$ groups_list.php?base_seo_url=1&view=group_page&page=$1 [L,QSA]
+
+RewriteRule ^calendar$ events_calendar.php [L,QSA]
+RewriteRule ^calendar/$ events_calendar.php?base_seo_url=1 [L,QSA]
+RewriteRule ^calendar/(\d{4}-\d{2}-\d{2})$ events_calendar.php?base_seo_url=1&date=$1 [L,QSA]
+
+RewriteRule ^create_task$ events_event_edit.php?event_private=1 [L,QSA]
+RewriteRule ^create_task/$ events_event_edit.php?base_seo_url=1&event_private=1 [L,QSA]
+RewriteRule ^create_task/(\d{4}-\d{2}-\d{2})$ events_event_edit.php?base_seo_url=1&event_private=1&date=$1 [L,QSA]
+
+RewriteRule ^edit_task$ events_event_edit.php?event_id=0 [L,QSA]
+RewriteRule ^edit_task/$ events_event_edit.php?base_seo_url=1&event_id=0 [L,QSA]
+RewriteRule ^edit_task/([0-9]+)$ events_event_edit.php?base_seo_url=1&event_id=$1 [L,QSA]
+
+RewriteRule ^(.*)/pages$ groups_list.php?view=group_page&base_seo_url=1&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/pages/$ groups_list.php?view=group_page&base_seo_url=2&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/pages/([0-9]+)$ groups_list.php?view=group_page&base_seo_url=2&name_seo=$1&offset=$2 [L,QSA]
+
+RewriteRule ^(.*)/groups$ groups_list.php?base_seo_url=1&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/groups/$ groups_list.php?base_seo_url=2&name_seo=$1&offset=0 [L,QSA]
+RewriteRule ^(.*)/groups/([0-9]+)$ groups_list.php?base_seo_url=2&name_seo=$1&offset=$2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !error=404
+#RewriteRule ^(.*[^/])$ search_results.php?display=profile&name_seo=$1 [L,QSA]
+RewriteRule ^(.*[^/])$ router.php?router_page=search_results&name_seo=$1 [L,QSA]
+
+RewriteRule ^_files/photo/(.*)_src.jpg _files/photo/$1_b.jpg [L,QSA]
+
+AddType text/x-component .htc
+AddDefaultCharset utf-8
+
+<IfModule mod_deflate.c>
+	<filesMatch "(?<!^proxy)\.(js|css|html|php|txt|log|json|obj)$">
+        SetOutputFilter DEFLATE
+		<ifModule mod_headers.c>
+			# Proxy fix
+			Header append Vary User-Agent env=!dont-vary
+		</IfModule>
+    </filesMatch>
+    <ifModule mod_env.c>
+        <FilesMatch "\.mp4">
+            SetEnv no-gzip 1
+        </FilesMatch>
+        <FilesMatch "avatar_face_save">
+            SetEnv no-gzip 1
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<FilesMatch "_files/photo/">
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access plus 1 year"
+    </IfModule>
+</FilesMatch>
