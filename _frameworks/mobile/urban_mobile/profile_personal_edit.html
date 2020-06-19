@@ -3,6 +3,12 @@
 select {border-radius: 4px; border: 1px solid #CFCFCF; background-color: #FFF;}
 .custom_tooltip{z-index:20;}
 </style>
+<style>
+    #personal_education option[value='4'],
+    #personal_education option[value='6'] {
+        display: none;
+    }
+</style>
 <script type="text/javascript" src="{url_tmpl_mobile}js/profile_personal_edit.js{cache_version_param}"></script>
 <script>
 
@@ -111,10 +117,21 @@ function editFieldOnStart(name)
             <label>&nbsp;</label>
             <!-- end_label_field_empty -->
             <input id="orientation_{id}" name="{name}[]" value="{id}" type="checkbox" {checked} />
-            <label for="orientation_{id}" style="width:auto;">{title}</label>
+            <label for="orientation_{id}" id="last-letter-change-in-russian-{id}" style="width:auto;">{title}</label>
             <div class="cl"></div>
             <!-- end_p_orientation -->
         </div>
+
+        <script>
+            var str_russian_man = document.getElementById("last-letter-change-in-russian-1").innerHTML;
+            str_russian_man = str_russian_man.replace(/Мужчина/g, 'Мужчины');
+            document.getElementById("last-letter-change-in-russian-1").innerHTML = str_russian_man;
+
+            var str_russian_woman = document.getElementById("last-letter-change-in-russian-2").innerHTML;
+            str_russian_woman = str_russian_woman.replace(/Женщина/g, 'Женщины');
+            document.getElementById("last-letter-change-in-russian-2").innerHTML = str_russian_woman;
+        </script>
+
         <!-- end_p_orientations -->
         <!-- begin_looking_your_orientation -->
         <div class="bl">

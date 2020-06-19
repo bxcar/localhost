@@ -1864,6 +1864,10 @@ class CHeader extends CHtmlBlock {
                     }
 
                     $pageTitle = l('page_title');
+                    if($_SERVER['REQUEST_URI'] == '/m/about.php') {
+                        $pageTitle = 'О нас';
+                    }
+
                     if ($p == 'search_results.php') {
                         if ($display != '') {
                             $pageTitle = l('page_' . $display);

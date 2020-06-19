@@ -12,6 +12,24 @@ include("./_include/core/pony_start.php");
 
 $addWhereLocation = true;
 
+//custom code start
+if(!isset($_COOKIE['not-the-first-search-request'])) {
+    setcookie(
+        "not-the-first-search-request",
+        "yes",
+        time() + (10 * 365 * 24 * 60 * 60)
+    );
+
+    $default_search_var = '{"radius":{"field":"radius","value":"0"},"people_nearby":{"field":"people_nearby","value":"0"},"country":{"field":"country","value":"0"},"state":{"field":"state","value":"0"},"city":{"field":"city","value":"0"},"status":{"field":"status","value":""},"with_photo":{"field":"with_photo","value":0}}';
+
+    DB::execute("
+					UPDATE userinfo SET
+                                user_search_filters_mobile   ='" . $default_search_var . "'
+                    WHERE user_id=" . get_session("user_id") . ";
+                ");
+}
+//custom code end
+
 $optionTmplName = Common::getTmplName();
 $display = get_param('display');
 if ($display == 'rate_people' && !Common::isOptionActive('photo_rating_enabled')) {
@@ -63,7 +81,7 @@ if(($display == 'profile' || $display == 'profile_info' || $display == 'wall') &
 
 class CSearchFilter extends UserFields
 {
-	function parseBlock(&$html)
+    function parseBlock(&$html)
 	{
         $this->parseMobileAdvancedFilter($html);
 

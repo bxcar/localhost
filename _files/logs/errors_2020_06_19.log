@@ -1,0 +1,334 @@
+2020-06-19 00:38:55
+User_id: 2
+Error: E_NOTICE
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\m\search.php
+Line: 31
+Message: Array to string conversion
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\core\main_close.php (Line: 16)
+Class: CSearchAdvanced
+Function: action
+
+File: C:\OSPanel\domains\localhost\m\_include\core\main_close.php (Line: 10)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 231)
+Function: include
+
+---------
+
+2020-06-19 00:39:47
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:19)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:40:18
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:20)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 23)
+Function: include
+
+---------
+
+2020-06-19 00:40:31
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:19)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:40:37
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:19)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:40:55
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:19)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:41:04
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:17)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 20)
+Function: include
+
+---------
+
+2020-06-19 00:47:49
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 16
+Message: ini_set(): A session is active. You cannot change the session module's ini settings at this time
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 16)
+Function: ini_set
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 21)
+Function: include
+
+---------
+
+2020-06-19 00:48:14
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 16
+Message: ini_set(): A session is active. You cannot change the session module's ini settings at this time
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 16)
+Function: ini_set
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 21)
+Function: include
+
+---------
+
+2020-06-19 00:48:35
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 16
+Message: ini_set(): A session is active. You cannot change the session module's ini settings at this time
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 16)
+Function: ini_set
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 21)
+Function: include
+
+---------
+
+2020-06-19 00:49:22
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:17)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:49:42
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:17)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:50:50
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:17)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+
+2020-06-19 00:50:52
+User_id: 0
+Error: E_WARNING
+URL: http://localhost/m/search.php
+File: C:\OSPanel\domains\localhost\_include\lib\session.php
+Line: 26
+Message: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OSPanel\domains\localhost\m\search.php:17)
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\session.php (Line: 26)
+Function: session_start
+
+File: C:\OSPanel\domains\localhost\_include\core\start.php (Line: 246)
+Function: include_once
+
+File: C:\OSPanel\domains\localhost\m\_include\core\pony_start.php (Line: 19)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\search.php (Line: 22)
+Function: include
+
+---------
+

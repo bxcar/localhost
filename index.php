@@ -1,4 +1,6 @@
 <?php
+header("Location: /m/index.php");
+die();
 /* (C) Websplosion LTD., 2001-2014
 
 IMPORTANT: This is a commercial software product

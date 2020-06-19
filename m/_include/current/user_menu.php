@@ -115,7 +115,8 @@ class CUserMenu extends CHtmlBlock
                              'profile_visitors' => 'users_viewed_me.php'
 						);
             if (Common::isOptionActive('friends_enabled')) {
-				$pageUrl['friends'] = 'my_friends.php';
+//				$pageUrl['friends'] = 'my_friends.php';
+				$pageUrl['friends'] = 'about.php';
 			}
             $urlPageUpgrade = Common::pageUrl('upgrade');
             if ($typeMenu == 'impact') {
