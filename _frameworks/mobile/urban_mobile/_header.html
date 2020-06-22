@@ -89,6 +89,57 @@
 
     <style id="style_calc" type="text/css"></style>
     <script>initStyle();</script>
+    <style>
+        #profile_gifts_list,
+        .list_interest_photo_cont.user_info,
+        .photo_description {
+            display: none;
+        }
+    </style>
+    <script>
+        var urlx_string = window.location.href; //window.location.href
+        var urlx = new URL(urlx_string);
+        var cx = urlx.searchParams.get("from");
+
+        if((window.location.pathname == '/m/profile_view.php')
+            && (cx == 'search' || cx == 'users_viewed_me' || cx == '')) {
+            addMenuButton()
+        }
+
+        if(window.location.pathname == '/m/search.php') {
+            addMenuButton();
+        }
+
+        var cx = urlx.searchParams.get("photo_cur_id");
+
+        if(cx) {
+            addMenuButton();
+        }
+
+        var cx1 = urlx.searchParams.get("showmenu");
+        var cx2 = urlx.searchParams.get("user_id");
+
+        if(cx1 == 'true' && cx2 != '{user_id}') {
+            addMenuButton();
+        }
+
+
+        function addMenuButton() {
+            var css = '.btn_play_header { left: 46px!important; } .header .part_left {margin-left: 46px}',
+                head = document.head || document.getElementsByTagName('head')[0],
+                style = document.createElement('style');
+
+            head.appendChild(style);
+
+            style.type = 'text/css';
+            if (style.styleSheet){
+                // This is required for IE8 and below.
+                style.styleSheet.cssText = css;
+            } else {
+                style.appendChild(document.createTextNode(css));
+            }
+        }
+    </script>
 </head>
 
 <body>
