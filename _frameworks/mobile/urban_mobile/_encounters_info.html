@@ -1,7 +1,67 @@
 
+<style>
+    .test-circle {
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /*margin-top: 4vh !important;*/
+    }
+
+    .test-circle__text {
+        white-space: nowrap;
+        display: block;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .test-circle__circle {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background: #b9cc34;
+        width: 50px;
+        height: 50px;
+    }
+
+    .test-circle__circle span {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .test-circle__circle span:first-child {
+        margin-bottom: 2px;
+    }
+
+    @media (max-width: 380px) {
+        .test-circle__text {
+            margin-bottom: 15px ;
+        }
+
+        .test-circle__text span {
+            display: none;
+        }
+
+        .test-circle {
+            flex-direction: column;
+            /*margin-top: 4vh !important;*/
+        }
+    }
+</style>
 <div id="profile_view_photo" class="bl_img bl_img_one" >
     <div class="no_one_found no_one_found_item hidden"><span>{l_no_one_found_please_edit_the_filter_above}</span></div>
     <img id="profile_view_photo_img" onload="$(this).removeClass('hidden')" src="{photo_cur}" class="hidden">
+    <div class="test-circle">
+        <span class="test-circle__text">Ожидаемое развитие ваших отношений<span> – </span></span>
+        <div class="test-circle__circle">
+            <span>70-</span><span>95%</span>
+        </div>
     <div class="loader loader_image">
         <div class="spinner center">
         <div class="spinner-blade"></div>
@@ -42,6 +102,12 @@
         <li><a class="maybe btn_like" onclick="photos.isSwipe=0; csearch.likeToMeet('M','reply',$(this)); return false;" href=""><span class="txt">{l_maybe}</span><span class="cloud"></span></a></li>
         <li><a id="encounters_like_yes" class="yes btn_like" onclick="photos.isSwipe=0; csearch.likeToMeet('Y','reply',$(this)); return false;" href=""><span class="txt">{l_yes}</span><span class="cloud"></span></a></li>
     </ul>
+</div>
+<!--<div class="test-circle">
+    <span class="test-circle__text">Ожидаемое развитие ваших отношений<span> – </span></span>
+    <div class="test-circle__circle">
+        <span>70-</span><span>95%</span>
+    </div>-->
 </div>
 {items}
 {user_block_report}

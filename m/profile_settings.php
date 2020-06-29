@@ -21,6 +21,7 @@ if ($display == 'invisible') {
     }
 }
 
+
 class CProfileSettings extends SettingsField {
 
     public $responseData = null;

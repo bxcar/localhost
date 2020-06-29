@@ -1,166 +1,404 @@
 {header}
 <!-- begin_hide_btn_submit -->
 <style type="text/css">
-#perform_action_profile_settings{display: none;}
+    #perform_action_profile_settings {
+        display: none;
+    }
+</style>
+<style>
+    #contact #loader_settings {
+        display: none !important;
+    }
+
+    #pp_contact_send {
+        background: #8ec046;
+        border: none;
+    }
+
+    #pp_contact_send[disabled], #pp_contact_send[disabled]:hover {
+        background: #b5b2ab;
+    }
+
+    #pp_contact {
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+
+    #pp_contact_cancel {
+        font-size: 14px;
+    }
+
+    .cnt-mob-popup-wrapper {
+        margin: 0 !important;
+        top: auto !important;
+        left: auto!important;
+    }
+
+    .pp_alert.pp_cont {
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%);
+        position: absolute !important;
+        margin: 0!important;
+    }
+
+    .btn.green.fl_right.icon_ok {
+        background: #8ec046;
+        border: none;
+    }
+
+    .cnt-mob-popup-wrapper .pp_alert .cont .wrong {
+        color: #000 !important;
+    }
 </style>
 <script>
-$(function(){
-   $(window).load(function(){
-       $('#loader_page').fadeOut(0,200);
-       $('#settings_menu').fadeTo(1,1000);
-   })
-})
+    $(function () {
+        $(window).load(function () {
+            $('#loader_page').fadeOut(0, 200);
+            $('#settings_menu').fadeTo(1, 1000);
+        })
+    })
 </script>
 <!-- end_hide_btn_submit -->
 
+<link rel="stylesheet" href="/_frameworks/mobile/urban_mobile/css/style-for-mob-popup-form.css">
+
 <script type="text/javascript" src="{url_tmpl_mobile}js/settings.js{cache_version_param}"></script>
 <script type="text/javascript" src="{url_tmpl_mobile}js/checkable.js{cache_version_param}"></script>
+<script type='text/javascript' src='/_frameworks/main/urban/js/jquery.popup.js?v=23'></script>
 <script>
-    var minCahrPass = '{password_length_min}'*1,
-        maxCahrPass = '{password_length_max}'*1;
+    var minCahrPass = '{password_length_min}' * 1,
+        maxCahrPass = '{password_length_max}' * 1;
 
-    var langParts = {'max_min_length_password' : '{max_min_length_password}',
-                     'incorrect_email' : '{j_incorrect_email}',
-                     'invalid_password_contain' : '{j_invalid_password_contain}',
-                     'changes_saved' : '{j_changes_saved}',
-                     'save' : '{j_save}',
-                     'profile_deleted_forever' : '{j_the_profile_will_be_deleted_forever}',
-                     'cancel' : '{j_cancel}',
-                     'delete' : '{j_delete}',
-                     'passwords_not_same' : '{j_passwords_not_same}',
-                     'old_and_new_passwords_are_same' : '{j_old_and_new_passwords_are_the_same}',
-        };
+    var langParts = {
+        'max_min_length_password': '{max_min_length_password}',
+        'incorrect_email': '{j_incorrect_email}',
+        'invalid_password_contain': '{j_invalid_password_contain}',
+        'changes_saved': '{j_changes_saved}',
+        'save': '{j_save}',
+        'profile_deleted_forever': '{j_the_profile_will_be_deleted_forever}',
+        'cancel': '{j_cancel}',
+        'delete': '{j_delete}',
+        'passwords_not_same': '{j_passwords_not_same}',
+        'old_and_new_passwords_are_same': '{j_old_and_new_passwords_are_the_same}',
+    };
 </script>
 <div class="wrapper">
-<div class="content">
-    <div id="header_settings" class="head">
-        Выберите раздел
-    </div>
-    <div id="settings_box" class="bl_settings">
-        <!-- begin_settings_menu -->
-        <div class="settings_menu_block">
-            <ul id="settings_menu" class="list" style="opacity:0;">
-                <li><a class="choose_settings" href="/m/info.php?page=priv_policy">Политика конфиденциальности</a></li>
-                <li><a class="choose_settings" href="/m/info.php?page=term_cond">Патенты</a></li>
-                <li><a class="choose_settings" href="#">Связь с нами</a></li>
-            </ul>
-            <div id="loader_page" class="loader_page show">
-                <div class="spinner spinnerw center">
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
-                <div class="spinner-blade"></div>
+    <div class="content">
+        <div id="header_settings" class="head">
+            Выберите раздел
+        </div>
+        <div id="settings_box" class="bl_settings">
+            <!-- begin_settings_menu -->
+            <div class="settings_menu_block">
+                <ul id="settings_menu" class="list" style="opacity:0;">
+                    <li><a class="choose_settings" href="/m/info.php?page=priv_policy">Политика конфиденциальности</a>
+                    </li>
+                    <li><a class="choose_settings" href="/m/info.php?page=term_cond">Патенты</a></li>
+                    <li>
+                        <div class="contact" id="contact"><a class="choose_settings" href="#">Связь с нами</a></div>
+                    </li>
+                </ul>
+                <div id="loader_page" class="loader_page show">
+                    <div class="spinner spinnerw center">
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                        <div class="spinner-blade"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end_settings_menu -->
+            <!-- end_settings_menu -->
 
-        <!-- begin_settings_profile -->
-        <div data-cmd="update" id="st_profile" class="frm settings">
-            <!-- begin_field_1 -->
-            <!-- begin_field_select_1 -->
-            <div class="bl">
-                <label class="lsetting">{label}:</label>
-                <select id="{name_select}" name="{name_select}">
-                    <!-- begin_field_select_item_1 -->
-                    <option {selected} value="{value}">{title}</option>
-                    <!-- end_field_select_item_1 -->
-                </select>
-            </div>
-            <!-- end_field_select_1 -->
-            <!-- end_field_1 -->
-
-            <!-- begin_timezone -->
-            <div class="bl">
-                <label class="lsetting">{l_timezone}:</label>
-                <select id="timezone" name="timezone">
-                    {selectbox_options}
-                </select>
-            </div>
-            <!-- end_timezone -->
-        </div>
-        <!-- end_settings_profile -->
-
-        <!-- begin_settings_notification -->
-        <div data-cmd="update" id="st_notification" class="frm var_rb" style="opacity:0;">
-            <!-- begin_field_2 -->
-            <!-- begin_field_radio_2 -->
-            <div class="bl">
-                <label class="lsetting">{label}:</label>
-                <div class="rb">
-                    <!-- begin_field_radio_item_2 -->
-                    <input class="niceRadio" data-label="{title}" value={value} name="{name_radio}" id="radio_{name_radio}_{value}" type="radio" {checked}/>
-
-                    <!-- end_field_radio_item_2 -->
+            <!-- begin_settings_profile -->
+            <div data-cmd="update" id="st_profile" class="frm settings">
+                <!-- begin_field_1 -->
+                <!-- begin_field_select_1 -->
+                <div class="bl">
+                    <label class="lsetting">{label}:</label>
+                    <select id="{name_select}" name="{name_select}">
+                        <!-- begin_field_select_item_1 -->
+                        <option {selected} value="{value}">{title}</option>
+                        <!-- end_field_select_item_1 -->
+                    </select>
                 </div>
-             </div>
-            <!-- end_field_radio_2 -->
-            <!-- end_field_2 -->
-        </div>
-        <!-- end_settings_notification -->
+                <!-- end_field_select_1 -->
+                <!-- end_field_1 -->
 
-        <!-- begin_settings_invisible -->
-        <div data-cmd="update" id="st_invisible" class="frm var_rb" style="opacity:0;">
-            <!-- begin_field_3 -->
-            <!-- begin_field_radio_3 -->
-            <div class="bl">
-                <label class="lsetting">{label}:</label>
-                <div class="rb">
-                    <!-- begin_field_radio_item_3 -->
-                    <input class="niceRadio" data-label="{title}" value={value} name="{name_radio}" id="radio_{name_radio}_{value}" type="radio" {checked}/>
-                    <!-- end_field_radio_item_3 -->
+                <!-- begin_timezone -->
+                <div class="bl">
+                    <label class="lsetting">{l_timezone}:</label>
+                    <select id="timezone" name="timezone">
+                        {selectbox_options}
+                    </select>
                 </div>
-             </div>
-            <!-- end_field_radio_3 -->
-            <!-- end_field_3 -->
-        </div>
-        <!-- end_settings_invisible -->
+                <!-- end_timezone -->
+            </div>
+            <!-- end_settings_profile -->
 
-        <!-- begin_settings_email -->
-        <div data-cmd="update_email" id="st_email" class="frm settings">
-            <div class="bl">
-                <label class="lsetting">{l_new_email}:</label>
-                <input id="st_email_new_email" name="new_email" type="text" />
-            </div>
-            <div class="bl">
-                <label class="lsetting">{l_password}:</label>
-                <input id="st_email_pass" maxlength="{password_length_max}" name="password" type="password" />
-            </div>
-        </div>
-        <!-- end_settings_email -->
+            <!-- begin_settings_notification -->
+            <div data-cmd="update" id="st_notification" class="frm var_rb" style="opacity:0;">
+                <!-- begin_field_2 -->
+                <!-- begin_field_radio_2 -->
+                <div class="bl">
+                    <label class="lsetting">{label}:</label>
+                    <div class="rb">
+                        <!-- begin_field_radio_item_2 -->
+                        <input class="niceRadio" data-label="{title}" value={value} name="{name_radio}"
+                               id="radio_{name_radio}_{value}" type="radio" {checked}/>
 
-        <!-- begin_settings_password -->
-        <div data-cmd="update_password" id="st_password" class="frm settings">
-            <div class="bl">
-                <label class="lsetting">{l_current_pswd}:</label>
-                <input id="st_old_password" maxlength="{password_length_max}" type="password" name="old_password" />
+                        <!-- end_field_radio_item_2 -->
+                    </div>
+                </div>
+                <!-- end_field_radio_2 -->
+                <!-- end_field_2 -->
             </div>
-            <div class="bl">
-                <label class="lsetting">{l_new_pswd}:</label>
-                <input id="st_new_password" maxlength="{password_length_max}" type="password" name="new_password" />
-            </div>
-            <div class="bl">
-                <label class="lsetting">{l_retype}:</label>
-                <input id="st_verify_new_password" maxlength="{password_length_max}" type="password" name="verify_new_password"/>
-            </div>
-        </div>
-        <!-- end_settings_password -->
+            <!-- end_settings_notification -->
 
-        <!-- begin_settings_delete -->
-        <div data-cmd="check_password" id="st_delete" class="frm settings">
-            <div class="bl">
-                <label class="lsetting">{l_current_pswd}:</label>
-                <input maxlength="{password_length_max}" id="st_delete_pass" type="password" name="password"/>
+            <!-- begin_settings_invisible -->
+            <div data-cmd="update" id="st_invisible" class="frm var_rb" style="opacity:0;">
+                <!-- begin_field_3 -->
+                <!-- begin_field_radio_3 -->
+                <div class="bl">
+                    <label class="lsetting">{label}:</label>
+                    <div class="rb">
+                        <!-- begin_field_radio_item_3 -->
+                        <input class="niceRadio" data-label="{title}" value={value} name="{name_radio}"
+                               id="radio_{name_radio}_{value}" type="radio" {checked}/>
+                        <!-- end_field_radio_item_3 -->
+                    </div>
+                </div>
+                <!-- end_field_radio_3 -->
+                <!-- end_field_3 -->
+            </div>
+            <!-- end_settings_invisible -->
+
+            <!-- begin_settings_email -->
+            <div data-cmd="update_email" id="st_email" class="frm settings">
+                <div class="bl">
+                    <label class="lsetting">{l_new_email}:</label>
+                    <input id="st_email_new_email" name="new_email" type="text"/>
+                </div>
+                <div class="bl">
+                    <label class="lsetting">{l_password}:</label>
+                    <input id="st_email_pass" maxlength="{password_length_max}" name="password" type="password"/>
+                </div>
+            </div>
+            <!-- end_settings_email -->
+
+            <!-- begin_settings_password -->
+            <div data-cmd="update_password" id="st_password" class="frm settings">
+                <div class="bl">
+                    <label class="lsetting">{l_current_pswd}:</label>
+                    <input id="st_old_password" maxlength="{password_length_max}" type="password" name="old_password"/>
+                </div>
+                <div class="bl">
+                    <label class="lsetting">{l_new_pswd}:</label>
+                    <input id="st_new_password" maxlength="{password_length_max}" type="password" name="new_password"/>
+                </div>
+                <div class="bl">
+                    <label class="lsetting">{l_retype}:</label>
+                    <input id="st_verify_new_password" maxlength="{password_length_max}" type="password"
+                           name="verify_new_password"/>
+                </div>
+            </div>
+            <!-- end_settings_password -->
+
+            <!-- begin_settings_delete -->
+            <div data-cmd="check_password" id="st_delete" class="frm settings">
+                <div class="bl">
+                    <label class="lsetting">{l_current_pswd}:</label>
+                    <input maxlength="{password_length_max}" id="st_delete_pass" type="password" name="password"/>
+                </div>
+            </div>
+            <!-- end_settings_delete -->
+        </div>
+
+        <div class="cnt-mob-popup-wrapper" style="display:none;">
+            <div id="pp_contact" class="popup pp_activate pp_contact pp_cont"
+                 style="top: 0px; left: 0px; margin: 25px 3px;">
+                <!--<div id="pp_contact" class="popup pp_activate" style="top: 30px; left: 50px; margin: 0;">-->
+                <div class="head">
+                    <strong>Послать сообщение администратору</strong>
+                    <a id="pp_contact_close" class="icon_close" href="#close"></a>
+                </div>
+                <div class="cont basic_fields">
+                    <div class="edit not_authorized">
+                        <div class="name">Имя</div>
+                        <input id="pp_contact_name" class="inp mail_info" name="username" autocomplete="off"
+                               style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAUBJREFUOBGVVE2ORUAQLvIS4gwzEysHkHgnkMiEc4zEJXCMNwtWTmDh3UGcYoaFhZUFCzFVnu4wIaiE+vvq6+6qTgthGH6O4/jA7x1OiCAIPwj7CoLgSXDxSjEVzAt9k01CBKdWfsFf/2WNuEwc2YqigKZpK9glAlVVwTTNbQJZlnlCkiTAZnF/mePB2biRdhwHdF2HJEmgaRrwPA+qqoI4jle5/8XkXzrCFoHg+/5ICdpm13UTho7Q9/0WnsfwiL/ouHwHrJgQR8WEwVG+oXpMPaDAkdzvd7AsC8qyhCiKJjiRnCKwbRsMw9hcQ5zv9maSBeu6hjRNYRgGFuKaCNwjkjzPoSiK1d1gDDecQobOBwswzabD/D3Np7AHOIrvNpHmPI+Kc2RZBm3bcp8wuwSIot7QQ0PznoR6wYSK0Xb/AGVLcWwc7Ng3AAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    </div>
+                    <div class="edit not_authorized">
+                        <div class="name">Электроная почта</div>
+                        <input id="pp_contact_email" class="inp mail_info" name="email">
+                    </div>
+
+                    <div class="edit textarea_loader" style="height: 181px;">
+                        <div class="name not_authorized">Тема</div>
+                        <textarea class="mail_info" id="pp_contact_text" name="comment"></textarea>
+                    </div>
+                </div>
+                <div class="foot">
+                    <input id="pp_contact_send" type="button" class="btn green fl_right" value="Отправить" disabled="">
+                    <a id="pp_contact_cancel" class="link" href="#reset">Отменить</a>
+                </div>
+                <!--</div>-->
+
+                <script>
+                    if (ajax_login_status) {
+                        $('.not_authorized').hide();
+                    } else {
+                        $('.textarea_loader').css({height: '181px'});
+                    }
+
+                    var pp_contact = $('#pp_contact'),//.modalPopup().open(),
+                        pp_contact_text = $('#pp_contact_text'),
+                        pp_contact_send = $('#pp_contact_send'),
+                        pp_contact_cancel = $('#pp_contact_cancel'),
+                        pp_contact_ajax = 1,
+                        pp_contact_loader = $('#pp_contact_loader'),
+                        pp_contact_cancel = $('#pp_contact_cancel'),
+                        pp_contact_name = $('#pp_contact_name'),
+                        pp_contact_email = $('#pp_contact_email');
+
+                    /*$('#contact').off('click').click(function () {
+                        pp_contact.open();
+                        return false;
+                    });*/
+
+                    $( "#contact .choose_settings" ).click(function(e) {
+                        e.preventDefault();
+                        $('.cnt-mob-popup-wrapper').css('display', 'block');
+                        $('.cnt-mob-popup-wrapper-thanks').css('display', 'none');
+                    });
+
+
+                    $('#pp_contact_cancel, #pp_contact_close').click(function (){
+                        if (this.hash=='#close') {
+                            $('.cnt-mob-popup-wrapper').css('display', 'none');
+                            // pp_contact.close();
+                        }
+                        if (this.hash=='#reset'&&!isChanges()){
+                            // pp_contact.close();
+                            $('.cnt-mob-popup-wrapper').css('display', 'none');
+                        }
+                        // customHideTip(pp_contact_email, pp_contact_send);
+                        $('.mail_info').val('');
+                        pp_contact_cancel.text('Отменить');
+                        pp_contact_send.prop('disabled', true);
+                        return false;
+
+                    });
+
+                    function isChanges() {
+                        var is = true;
+                        $('.mail_info:visible').each(function () {
+                            if ($.trim($(this).val())) {
+                                is = is && true
+                            } else {
+                                is = is && false
+                            }
+                        })
+                        return is;
+                    }
+
+                    $('.mail_info').on('change propertychange input', function () {
+                        if (!isChanges()) {
+                            pp_contact_cancel.text('Отменить');
+                            pp_contact_send.prop('disabled', true);
+                        } else {
+                            pp_contact_cancel.text('Сбросить');
+                            pp_contact_send.prop('disabled', false);
+                        }
+                    })
+
+                    $('#pp_contact_email').on('change propertychange input', function () {
+                        customHideTip(pp_contact_email, pp_contact_send)
+                    })
+
+                    pp_contact_send.click(function () {
+                        if (!ajax_login_status && !checkEmail(pp_contact_email.val())) {
+                            customShowTip(pp_contact_email, pp_contact_send, 'Неверный адрес.', pp_contact);
+                            return false;
+                        }
+                        if (pp_contact_ajax) {
+                            var val = $.trim(pp_contact_text.val());
+                            pp_contact_ajax = 0;
+                            pp_contact_send.prop('disabled', true);
+                            // pp_contact.close();
+                            $('.cnt-mob-popup-wrapper').css('display', 'none');
+                            var data = {cmd: 'send', ajax: 1, comment: val};
+                            if (!ajax_login_status) {
+                                data = {
+                                    cmd: 'send',
+                                    ajax: 1,
+                                    comment: val,
+                                    email: $.trim(pp_contact_email.val()),
+                                    username: $.trim(pp_contact_name.val())
+                                };
+                            }
+                            $.post('/contact.php', data, function (res) {
+                                pp_contact_ajax = 1;
+                                $('.mail_info').val('');
+                                pp_contact_cancel.text('Отменить');
+                                var data = getDataAjax(res, 'data');
+                                if (data !== false) {
+                                    //console.log($(data.data).is('.error'), data.data);
+                                }
+                            });
+                            alertHtmlArea = '.column_main';
+                            setTimeout(function () {
+                                // alertCustom('Сообщение отправлено!', true, ALERT_HTML_SUCCESS)
+                                alertHtml('Сообщение отправлено!', true, 'Получилось!');
+                            }, 200);
+                        }
+                        return false;
+                    })
+
+                    $('.pp_body').on('click', function (e) {
+                        if (e.target == this && $('#pp_contact:visible')[0]
+                            && $.trim(pp_contact_text.val()) == '') {
+                            // pp_contact.close()
+                            $('.cnt-mob-popup-wrapper').css('display', 'none');
+                        }
+                    });
+
+                    function alertHtml(msg, shadow, title)
+                    {
+                        var title=defaultFunctionParamValue(title, ALERT_HTML_ERROR);
+                        // alertHtmlClose();
+                        windowCode = '<div class="cnt-mob-popup-wrapper cnt-mob-popup-wrapper-thanks"><div class="pp_alert pp_cont"><div class="head"><strong>'+title+
+                            '</strong><a class="icon_close" onclick="alertHtmlClose()" href="#"></a></div><div class="cont"><div class="wrong">'+msg+
+                            '</div></div><div class="foot"><input onclick="alertHtmlClose(); return false;" type="button" class="btn green fl_right icon_ok" value="' + ALERT_HTML_OK + '" /></div></div></div>';
+                        $(windowCode).modalPopup({wrClass: 'alert_wrapper', shClass: (shadow?'':'page_shadow_empty'),wrCss:{zIndex:1001}})
+                            .open().find('input').click(closeAlert).focus();
+                    }
+
+                    function closeAlert(e) {
+                        if(e&&$(e.target).is('.alert_wrapper')&&$('.pp_confirm:visible').last()[0]){
+                            return false
+                        }
+                        if ((e&&e.target==this)||!e){
+                            var el=$('.popup_alert:visible').last();
+                            el.close('', 0, !el.data('no_remove'));
+                            return false
+                        }
+                    }
+
+                    function  alertHtmlClose() {
+                        $('.cnt-mob-popup-wrapper-thanks').css('display', 'none');
+                    }
+                </script>
             </div>
         </div>
-        <!-- end_settings_delete -->
-    </div>
-{footer}
+
+
+        {footer}

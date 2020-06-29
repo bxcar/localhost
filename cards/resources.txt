@@ -1,0 +1,4 @@
+https://github.com/riolcrt/swipi-cards#readme
+https://riolcrt.github.io/swipi-cards/demo/
+https://www.npmjs.com/package/swipi-cards
+https://www.npmjs.com/search?q=card%20swipe

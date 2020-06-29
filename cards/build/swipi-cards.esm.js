@@ -1,0 +1,1 @@
+import{p as r,b as t}from"./p-5a291771.js";r().then(r=>t([["p-xprey2vg",[[1,"rg-swipi-card",{rightColor:[1,"right-color"],leftColor:[1,"left-color"],cardState:[32]}],[1,"rg-swipi-cards",{stackOffsetY:[2,"stack-offset-y"],currentCard:[32],children:[32]}]]]],r));
