@@ -1,0 +1,12 @@
+2020-06-30 09:05:35
+User_id: 2
+Error: E_NOTICE
+URL: http://localhost/m/info.php?page=patents
+File: C:\OSPanel\domains\localhost\m\info.php
+Line: 39
+Message: Undefined index: title1
+
+Call stack:
+
+---------
+

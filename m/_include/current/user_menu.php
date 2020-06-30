@@ -161,12 +161,15 @@ class CUserMenu extends CHtmlBlock
                 if (!Common::isOptionActive('free_site')) {
                     if (!User::isSuperPowers()) {
                         $pageUrl['upgrade'] = $urlPageUpgrade;
+                        $pageUrl['upgrade'] = $urlPageUpgrade;
                     }
                     if (Common::isOptionActive('credits_enabled')) {
                         $pageUrl['boost'] = Common::pageUrl('profile_boost');
                     }
                 }
             }
+
+            $pageUrl['street_chat'] = 'info.php?page=important_information';
 
             $blockUserMenuItem = "{$blockUserMenu}_item";
             $blockUserMenuCounter = "{$blockUserMenuItem}_counter";

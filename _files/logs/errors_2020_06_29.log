@@ -1,0 +1,676 @@
+2020-06-29 23:56:59
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:02
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:10
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:13
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:21
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:24
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:32
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:35
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:43
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:46
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:47
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/index.php
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+---------
+
+2020-06-29 23:57:54
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:57:56
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:58:05
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:58:07
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:58:16
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:58:18
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+
+2020-06-29 23:58:23
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/upgrade.php
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+---------
+
+2020-06-29 23:58:27
+User_id: 2
+Error: E_PARSE
+URL: http://localhost/m/update_server_ajax.php?&set_template_mobile_runtime=urban_mobile&site_part_runtime=mobile
+File: C:\OSPanel\domains\localhost\m\_include\current\user_menu.php
+Line: 174
+Message: syntax error, unexpected '$blockUserMenuItem' (T_VARIABLE)
+
+Call stack:
+
+File:  (Line: )
+Function: fatalScriptError
+
+$_POST = Array
+(
+    [cmd] => update_im
+    [users_list] => {}
+    [user_to] => 0
+    [display] => general_chat
+    [last_id] => 0
+    [get_read_msg_from_im] => {}
+    [is_mode_fb] => false
+    [timeout_server] => 15
+    [page] => upgrade.php
+    [request_user_id] => 0
+    [city_counter_street_chat] => 1
+    [city_counter_games] => 0
+    [city_counter] => 0
+    [geo_position] => Array
+        (
+            [lat] => 0
+            [long] => 0
+        )
+
+)
+
+---------
+

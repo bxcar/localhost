@@ -7,6 +7,17 @@ It can be found at http://www.chameleonsocial.com/license.doc
 
 This notice may not be removed from the source code. */
 
+
+if(!isset($_COOKIE['CardsVisited'])) {
+    setcookie(
+        "CardsVisited",
+        "True",
+        time() + (10 * 365 * 24 * 60 * 60)
+    );
+    header("Location: /cards");
+    die();
+}
+
 $area = "login";
 include("./_include/core/pony_start.php");
 

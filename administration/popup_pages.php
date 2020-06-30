@@ -55,7 +55,7 @@ class CAdminPopupPages extends CHtmlBlock {
 
         $tmplOptionSet = Common::getOption('set', 'template_options');
         if($tmplOptionSet == 'urban') {
-            $where = ' AND page IN ("priv_policy", "term_cond")';
+            $where = ' AND page IN ("priv_policy", "term_cond", "card_1", "card_2", "card_3", "card_4", "important_information", "patents")';
         }
 
         $sql = 'SELECT page FROM ' . $this->getTable() . '
