@@ -1,0 +1,240 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Психологический портрет / Тест</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="jumbotron">
+<div class="container" style="padding-top: 15px;">
+
+  <div  class="row">
+    <div id="div1" class="col-md-offset-4 col-sm-4" style="padding-top: 5px;">
+        <div style="background-color: white;">
+      <div class="panel panel-default">
+	<div  class="panel-body">
+          
+          <div id='title'>
+
+			</div>
+ 
+          <div id="h4Start">
+              <!--p class="nachalo">Для того, чтобы увидеть Ваш психологический портрет и будущие отношения с другими людьми, ответьте пожалуйста на вопросы алгоритма <br/>(займет не более 2 минут).
+              </p--><p class="nachalo">Пожалуйста! Для максимально точного результата просим Вас отнестись со всей серьезностью и внимательностью к данным вопросам. От этого зависит качество результата. ​ В то же время не стоит задумываться над каждым вопросом более 5 секунд. <font color="red">И что очень важно:</font> <font color="blue" style = "text-decoration:underline;">выбирать нужно не тот ответ, который Вам нравится, а тот, который больше всего Вам подходит!</font>
+			  </p><br/><br/>
+          </div>
+          
+     <div class="row text-center">
+<div class="col-md-12">   
+          
+  <button id="start" class="btn btn-primary btn-lg btn-block">Начать</button>
+</div></div> 
+
+
+         
+          <div id="content">
+
+              <br/>
+			  
+<div id="vsevoprosi" style="display: none;">
+<form ACTION="result.php" name="form" id="form">
+<div id="1">
+<INPUT TYPE=RADIO NAME=pol1 id=pol1 VALUE=10 class=t1><label for=pol1>Я мужчина</label>
+<br>
+<INPUT TYPE=RADIO NAME=pol1 id=pol11 VALUE=1 class=t2><label for=pol11>Я женщина</label>			  
+</div>	
+<div id="2" style="display: none;">
+<INPUT TYPE=RADIO NAME=klm1 id=klm1 VALUE=10 class=t1><label for=klm1>интуитивный</label>
+<br>
+<INPUT TYPE=RADIO NAME=klm1 id=klm11 VALUE=1 class=t2><label for=klm11>логический</label>			  
+</div>
+<div id="3" style="display: none;">
+<INPUT TYPE=RADIO NAME=klp1 id=klp1 VALUE=10 class=t1><label for=klp1>поверхностность</label>
+<br>
+<INPUT TYPE=RADIO NAME=klp1 id=klp11 VALUE=1 class=t2><label for=klp11>кропотливость</label>			  
+</div>
+<div id="4" style="display: none;">
+<INPUT TYPE=RADIO NAME=r1 id=r1 VALUE=10 class=t1><label for=r1>систематический</label>
+<br>
+<INPUT TYPE=RADIO NAME=r1 id=rr1 VALUE=1 class=t2><label for=rr1>спонтанный</label>			  
+</div>
+<div id="5" style="display: none;">
+<INPUT TYPE=RADIO NAME=r2 id=r2 VALUE=10 class=t1><label for=r2>структура</label>
+<br>
+<INPUT TYPE=RADIO NAME=r2 id=rr2 VALUE=1 class=t2><label for=rr2>течение</label>
+</div>
+<div id="6" style="display: none;">
+<INPUT TYPE=RADIO NAME=r3 id=r3 VALUE=10 class=t1><label for=r3>план</label>
+<br>
+<INPUT TYPE=RADIO NAME=r3 id=rr3 VALUE=1 class=t2><label for=rr3>импровизация</label>
+</div>
+<div id="7" style="display: none;">
+<INPUT TYPE=RADIO NAME=r4 id=r4 VALUE=10 class=t1><label for=r4>решение</label>
+<br>
+<INPUT TYPE=RADIO NAME=r4 id=rr4 VALUE=1 class=t2><label for=rr4>импульс</label>
+</div>
+<div id="8" style="display: none;">
+<INPUT TYPE=RADIO NAME=r5 id=r5 VALUE=10 class=t1><label for=r5>систематичность</label>
+<br>
+<INPUT TYPE=RADIO NAME=r5 id=rr5 VALUE=1 class=t2><label for=rr5>случайность</label>
+</div>
+<div id="9" style="display: none;">
+<INPUT TYPE=RADIO NAME=r6 id=r6 VALUE=10 class=t1><label for=r6>организованный</label>
+<br>
+<INPUT TYPE=RADIO NAME=r6 id=rr6 VALUE=1 class=t2><label for=rr6>импульсивный</label>
+</div>
+<div id="10" style="display: none;">
+<INPUT TYPE=RADIO NAME=r7 id=r7 VALUE=10 class=t1><label for=r7>подготовка</label>
+<br>
+<INPUT TYPE=RADIO NAME=r7 id=rr7 VALUE=1 class=t2><label for=rr7>экспромт</label>
+</div>
+<div id="11" style="display: none;">
+<INPUT TYPE=RADIO NAME=l1 id=l1 VALUE=10 class=t2><label for=l1>решительный</label>
+<br>
+<INPUT TYPE=RADIO NAME=l1 id=ll1 VALUE=1 class=t2><label for=ll1>преданный</label>
+</div>
+<div id="12" style="display: none;">
+<INPUT TYPE=RADIO NAME=l2 id=l2 VALUE=10 class=t2><label for=l2>твердый</label>
+<br>
+<INPUT TYPE=RADIO NAME=l2 id=ll2 VALUE=1 class=t2><label for=ll2>мягкосердечный</label>
+</div>
+<div id="13" style="display: none;">
+<INPUT TYPE=RADIO NAME=l3 id=l3 VALUE=10 class=t2><label for=l3>склонный к критике</label>
+<br>
+<INPUT TYPE=RADIO NAME=l3 id=ll3 VALUE=1 class=t2><label for=ll3>доброжелательный</label>
+</div>
+<div id="14" style="display: none;">
+<INPUT TYPE=RADIO NAME=l4 id=l4 VALUE=10 class=t2><label for=l4>преимущество</label>
+<br>
+<INPUT TYPE=RADIO NAME=l4 id=ll4 VALUE=1 class=t2><label for=ll4>удача</label>
+</div>
+<div id="15" style="display: none;">
+<INPUT TYPE=RADIO NAME=l5 id=l5 VALUE=10 class=t2><label for=l5>голова</label>
+<br>
+<INPUT TYPE=RADIO NAME=l5 id=ll5 VALUE=1 class=t2><label for=ll5>сердце</label>
+</div>
+<div id="16" style="display: none;">
+<INPUT TYPE=RADIO NAME=l6 id=l6 VALUE=10 class=t2><label for=l6>мысли</label>
+<br>
+<INPUT TYPE=RADIO NAME=l6 id=ll6 VALUE=1 class=t2><label for=ll6>чувства</label>
+</div>
+<div id="17" style="display: none;">
+<INPUT TYPE=RADIO NAME=l7 id=l7 VALUE=10 class=t2><label for=l7>анализировать</label>
+<br>
+<INPUT TYPE=RADIO NAME=l7 id=ll7 VALUE=1 class=t2><label for=ll7>симпатизировать</label>
+</div>
+<div id="18" style="display: none;">
+<INPUT TYPE=RADIO NAME=s1 id=s1 VALUE=10 class=t3><label for=s1>фактический</label>
+<br>
+<INPUT TYPE=RADIO NAME=s1 id=ss1 VALUE=1 class=t3><label for=ss1>теоретический</label>
+</div>
+<div id="19" style="display: none;">
+<INPUT TYPE=RADIO NAME=s2 id=s2 VALUE=10 class=t3><label for=s2>применение на практике</label>
+<br>
+<INPUT TYPE=RADIO NAME=s2 id=ss2 VALUE=1 class=t3><label for=ss2>поиск скрытого смысла</label>
+</div>
+<div id="20" style="display: none;">
+<INPUT TYPE=RADIO NAME=s3 id=s3 VALUE=10 class=t3><label for=s3>опыт</label>
+<br>
+<INPUT TYPE=RADIO NAME=s3 id=ss3 VALUE=1 class=t3><label for=ss3>теории</label>
+</div>
+<div id="21" style="display: none;">
+<INPUT TYPE=RADIO NAME=s4 id=s4 VALUE=10 class=t3><label for=s4>рассудительный</label>
+<br>
+<INPUT TYPE=RADIO NAME=s4 id=ss4 VALUE=1 class=t3><label for=ss4>удивительный</label>
+</div>
+<div id="22" style="display: none;">
+<INPUT TYPE=RADIO NAME=s5 id=s5 VALUE=10 class=t3><label for=s5>практик</label>
+<br>
+<INPUT TYPE=RADIO NAME=s5 id=ss5 VALUE=1 class=t3><label for=ss5>фантазер</label>
+</div>
+<div id="23" style="display: none;">
+<INPUT TYPE=RADIO NAME=s6 id=s6 VALUE=10 class=t3><label for=s6>реалист</label>
+<br>
+<INPUT TYPE=RADIO NAME=s6 id=ss6 VALUE=1 class=t3><label for=ss6>мечтатель</label>
+</div>
+<div id="24" style="display: none;">
+<INPUT TYPE=RADIO NAME=s7 id=s7 VALUE=10 class=t3><label for=s7>реальность</label>
+<br>
+<INPUT TYPE=RADIO NAME=s7 id=ss7 VALUE=1 class=t3><label for=ss7>перспективность</label>
+</div>
+<div id="25" style="display: none;">
+<INPUT TYPE=RADIO NAME=e1 id=e1 VALUE=10 class=t4><label for=e1>шумный</label>
+<br>
+<INPUT TYPE=RADIO NAME=e1 id=ee1 VALUE=1 class=t4><label for=ee1>тихий</label>
+</div>
+<div id="26" style="display: none;">
+<INPUT TYPE=RADIO NAME=e2 id=e2 VALUE=10 class=t4><label for=e2>оживленный</label>
+<br>
+<INPUT TYPE=RADIO NAME=e2 id=ee2 VALUE=1 class=t4><label for=ee2>спокойный</label>
+</div>
+<div id="27" style="display: none;">
+<INPUT TYPE=RADIO NAME=e3 id=e3 VALUE=10 class=t4><label for=e3>общительность</label>
+<br>
+<INPUT TYPE=RADIO NAME=e3 id=ee3 VALUE=1 class=t4><label for=ee3>сосредоточенность</label>
+</div>
+<div id="28" style="display: none;">
+<INPUT TYPE=RADIO NAME=e4 id=e4 VALUE=10 class=t4><label for=e4>расходование энергии</label>
+<br>
+<INPUT TYPE=RADIO NAME=e4 id=ee4 VALUE=1 class=t4><label for=ee4>сохранение энергии</label>
+</div>
+<div id="29" style="display: none;">
+<INPUT TYPE=RADIO NAME=e5 id=e5 VALUE=10 class=t4><label for=e5>ориентированный во внешний мир</label>
+<br>
+<INPUT TYPE=RADIO NAME=e5 id=ee5 VALUE=1 class=t4><label for=ee5>ориентированный внутрь себя</label>
+</div>
+<div id="30" style="display: none;">
+<INPUT TYPE=RADIO NAME=e6 id=e6 VALUE=10 class=t4><label for=e6>высказываться вслух</label>
+<br>
+<INPUT TYPE=RADIO NAME=e6 id=ee6 VALUE=1 class=t4><label for=ee6>переживать в себе</label>
+</div>
+<div id="31" style="display: none;">
+<INPUT TYPE=RADIO NAME=e7 id=e7 VALUE=10 class=t4><label for=e7>отважный</label>
+<br>
+<INPUT TYPE=RADIO NAME=e7 id=ee7 VALUE=1 class=t4><label for=ee7>хладнокровный</label>
+</div>
+<INPUT TYPE=hidden NAME=tip VALUE=cheb>
+<input class=knopka type=submit style="display: none;" value="Сохранить">
+<div id="wait" style="display: none;">Ожидайте, обрабатываем результаты ...</div>
+<!--input class=knopka type=submit value="Сохранить"-->
+</form>
+</div>
+
+			  
+
+			  
+			  
+			  
+			  
+  <button id="back" disabled>Back</button>
+  <button id="next">Next</button>
+               <div id="panel-footer1" class="panel-footer1" style="display: none;"><br/>
+                   <p id="questCount"></p>
+                  <div id="barra" class="progress">
+    <div id="bar" class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width:1%">
+</div>
+                      
+
+
+                    
+</div>
+    </div>
+
+</div>
+          
+</div></div></div></div>
+
+</div></div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</div>    
+</body>
+</html>

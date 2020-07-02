@@ -280,6 +280,25 @@ class CGold extends CHtmlBlock {
                     $html->parse("payment_module_{$service}");
                 }
             }
+
+            $typePaymentFeatures = Common::getOption('type_payment_features', 'template_options');
+            $typePaymentFeatures = '%' . $typePaymentFeatures . '%';
+
+            $features = DB::select('payment_features', '`type` LIKE ' . to_sql($typePaymentFeatures) . ' AND `status` = 1');
+            foreach ($features as $key => $item) {
+                if ($item['alias'] == '3d_city' && !Common::isModuleCityActive()) {
+                    continue;
+                }
+                if ($item['alias'] == 'videochat' && !Common::isOptionActive('videochat')) {
+                    continue;
+                }
+                if ($item['alias'] == 'audiochat' && !Common::isOptionActive('audiochat')) {
+                    continue;
+                }
+                $html->parse("feature_{$item['alias']}", false);
+            }
+
+            $html->parse('superpowers_info');
         }
 
 

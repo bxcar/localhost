@@ -48,6 +48,136 @@ $(document).ready(function(){
     $("#pay_system .hide_for_"+item).remove();
 });
 </script>
+
+<style>
+    .cr_page {
+        display: none;
+    }
+
+    .cr_page a {
+        text-decoration: underline;
+    }
+
+    .cr_page .title a {
+        display: flex;
+        align-items: center;
+    }
+
+    .cr_page .title a img {
+        margin-right: 5px;
+    }
+</style>
+<div id="for_cr_page"></div>
+<script>
+
+    function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+        if (begin == -1) {
+            begin = dc.indexOf(prefix);
+            if (begin != 0) return null;
+        }
+        else
+        {
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
+        }
+        // because unescape has been deprecated, replaced with decodeURI
+        //return unescape(dc.substring(begin + prefix.length, end));
+        return decodeURI(dc.substring(begin + prefix.length, end));
+    }
+
+    var cookie_check = getCookie("spotlight_f_activated");
+    if (cookie_check == null) {
+        var css = '.cr_page .title a img { display: none} }',
+            head = document.getElementById('for_cr_page'),
+            style = document.createElement('style');
+
+        head.appendChild(style);
+
+        style.type = 'text/css';
+        if (style.styleSheet){
+            // This is required for IE8 and below.
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+    }
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("action");
+    if(c == 'refill_credits') {
+        var css = '.bl_activate .item { display: none} .bl_activate .item.cr_page { display: block; }',
+            head = document.getElementById('for_cr_page'),
+            style = document.createElement('style');
+
+        head.appendChild(style);
+
+        style.type = 'text/css';
+        if (style.styleSheet){
+            // This is required for IE8 and below.
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+    }
+
+
+</script>
+<script>
+
+    var csearch = new CSearch('');
+    csearch.langParts = {no_one_found: 'Никого не найдено, пожалуйста, отредактируйте фильтр выше.',
+        public_photo_upload_to_activate : 'Публичная загрузка фотографий для активации!',
+        your_are_here : 'Я здесь!',
+        success_spotlight : 'Получилось! Вскоре вы появитесь в центре внимания.',
+        only_you_will_see_your_photo_in_the_spotlight : 'Когда ваш профиль скрыт, только вы увидите свою фотографию в SpotLight.',
+        cancel : 'Отмена',
+        ok : 'Готово',}
+
+
+    csearch.setSpotlightNumber('20','1', 'http://localhost/m/search_results.php', '2');
+
+    var observeDOM = (function(){
+        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+        return function( obj, callback ){
+            if( !obj || !obj.nodeType === 1 ) return; // validation
+
+            if( MutationObserver ){
+                // define a new observer
+                var obs = new MutationObserver(function(mutations, observer){
+                    callback(mutations);
+                })
+                // have the observer observe foo for changes in children
+                obs.observe( obj, { childList:true, subtree:true });
+            }
+
+            else if( window.addEventListener ){
+                obj.addEventListener('DOMNodeInserted', callback, false);
+                obj.addEventListener('DOMNodeRemoved', callback, false);
+            }
+        }
+    })();
+
+    // Observe a specific DOM element:
+    observeDOM( document.querySelector('body'), function(m){
+        $('.tip_confirm .btn_done').click(function () {
+            $('.cr_page .title a img').css('display', 'block');
+            var cookie_check = getCookie("spotlight_f_activated");
+            if (cookie_check == null) {
+                // do cookie doesn't exist stuff;
+                document.cookie = "spotlight_f_activated=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            }
+        });
+    });
+
+</script>
 <div class="wrapper">
 <div class="content">
     <!-- begin_superpowers_info -->
@@ -57,44 +187,83 @@ $(document).ready(function(){
     <div class="bl_activate">
         <!-- begin_feature_3d_city -->
         <div class="item">
-            <div class="icon city">
-                <div class="title">{l_3dcity_a_wonderful_live_experience}</div>
-                <p>{l_chat_with_your_friends_and_meet_new_people_in_a_real_3d_environment}</p>
+            <div class="icon city" style="background: url(/_frameworks/mobile/urban_mobile/images/premium-icons.png) 6px -70px no-repeat;
+    padding: 15px 0 15px 65px;">
+                <div class="title">Развитие будущих отношений</div>
+                <p>Возможность видеть развитие Ваших отношений подробно со всеми.</p>
             </div>
         </div>
         <!-- end_feature_3d_city -->
         <!-- begin_feature_encounters -->
         <!--script>$(function(){$('.wrapper > .content').css({minHeight:'775px'})})</script-->
         <div class="item">
-            <div class="icon encounters">
-                <div class="title">{l_encounters}</div>
-                <p>{l_get_the_encounters_folder_to_find_out_who_said}</p>
+            <div class="icon encounters" style="background: url(/_frameworks/mobile/urban_mobile/images/premium-icons.png) 6px 18px no-repeat;
+    padding: 15px 0 15px 65px;">
+                <div class="title">Знакомства - выясните, кто хочет с вами познакомиться</div>
+                <p>Вы сможете видеть, кто хотел бы с вами познакомиться.</p>
             </div>
         </div>
         <!-- end_feature_encounters -->
         <!-- begin_feature_chat_with_popular_users -->
-        <div class="item">
+        <!--<div class="item">
             <div class="icon chat">
                 <div class="title">{l_chat_with_popular_users}</div>
                 <p>{l_get_exclusive_access_to_the_most_popular_people}</p>
             </div>
-        </div>
+        </div>-->
         <!-- end_feature_chat_with_popular_users -->
         <!-- begin_feature_invisible_mode -->
         <div class="item">
-            <div class="icon invisible">
-                <div class="title">{l_invisible_mode}</div>
-                <p>{l_view_other_members_profiles_invisibly}</p>
+            <div class="icon invisible" style="background: url(/_frameworks/mobile/urban_mobile/images/premium-icons.png) 6px -180px no-repeat;
+    padding: 15px 0 15px 65px;">
+                <div class="title">Режим "Невидимка"</div>
+                <p>Заходите к другим людям в профиль так, чтобы они никогда не видели, что вы у них были!</p>
             </div>
         </div>
         <!-- end_feature_invisible_mode -->
         <!-- begin_feature_special_delivery -->
         <div class="item">
-            <div class="icon special">
-                <div class="title">{l_special_delivery}</div>
-                <p>{l_get_all_your_messages_read_first}</p>
+            <div class="icon special" style="background: url(/_frameworks/mobile/urban_mobile/images/premium-icons.png) 6px -288px no-repeat;
+    padding: 15px 0 15px 65px;">
+                <div class="title">Быстрая доставка сообщений</div>
+                <p>Все ваши сообщения будут читаться первыми.</p>
             </div>
         </div>
+        <div class="item">
+            <div class="icon invisible" style="background: url(/_frameworks/mobile/urban_mobile/images/premium-icons-friend.jpg) 0 0 no-repeat; background-size: contain;
+    padding: 15px 0 15px 65px;">
+                <div class="title">Узнай свои отношения с другом</div>
+                <p>Узнай свои отношения с другом</p>
+            </div>
+        </div>
+
+
+
+        <div class="item cr_page">
+            <div class="icon" style="padding: 15px 0 15px 15px;">
+                <div class="title"><a href="#">Узнать развитие отношений</a></div>
+                <p>Узнайте как будут развиваться отношения у Вас с любым пользователем!</p>
+            </div>
+        </div>
+        <div class="item cr_page">
+            <div class="icon" style="padding: 15px 0 15px 15px;">
+                <div class="title"><a onclick="csearch.spotlightActivated(); return false;" href="/m/upgrade.php?action=payment_services&type=spotlight&request_uri=http://localhost/m/search_results.php"><img src="/_frameworks/mobile/urban_mobile/images/check.png">Оказаться в ряду избранных</a></div>
+                <p>Проявите себя! Поднимитесь в ряд избранных, и вас сразу заметит огромное количество пользователей!</p>
+            </div>
+        </div>
+        <div class="item cr_page">
+            <div class="icon" style="padding: 15px 0 15px 15px;">
+                <div class="title"><a href="">Подняться на первое место в поиске</a></div>
+                <p>Поднимитесь на первое место, чтобы встретить еще более интересных людей!</p>
+            </div>
+        </div>
+        <div class="item cr_page">
+            <div class="icon" style="padding: 15px 0 15px 15px;">
+                <div class="title"><a href="#">Вы показываетесь чаще в знакомствах</a></div>
+                <p>Пусть ваша фотография появляется гораздо чаще, так вы познакомитесь с большим количеством людей!</p>
+            </div>
+        </div>
+
         <!-- end_feature_special_delivery -->
         <!-- begin_feature_audiochat -->
         <div class="item">

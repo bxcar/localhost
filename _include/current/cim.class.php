@@ -1468,7 +1468,8 @@ class CIm extends CHtmlBlock
                 $isNotifSend = false;
                 //$toDelete = 1;
                 $notMsgToDb = true;
-            } elseif (!$isFreeSite && !$isSuperPowers) {
+//            } elseif (!$isFreeSite && !$isSuperPowers) {
+            } elseif (false) {
                 $notAllowedChatWithPopularUsers = Common::isOptionActive('not_allowed_chat_with_popular_users', 'template_options');
                 $numberSpMsgDay = $g_user['sp_sending_messages_per_day'] + 1;
                 if ($numberSpMsgDay > Common::getOption('sp_sending_messages_per_day_urban')) {
@@ -1898,6 +1899,7 @@ class CIm extends CHtmlBlock
                        'no_credits_for_msgs_f',
                        'welcoming_message',
                        );
+
         $craftedMsg = '';
         if (!empty($msg)) {
             $optionTmplName = Common::getOption('name', 'template_options');

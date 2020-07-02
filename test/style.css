@@ -1,0 +1,180 @@
+body {
+/*  background-color: #d7d7d7;*/
+  color: #545454;
+  font-family:"Segoe UI","Helvetica Neue","Helvetica","Lucida Grande",Arial,"Ubuntu","Cantarell","Fira Sans",sans-serif;
+   display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+.jumbotron {
+   display: table-cell;
+   vertical-align: middle;
+   background-color: #FFFFFF;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  color: #6d6d6d;
+}
+
+#barra {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+}
+
+#bar {
+  height: 10px;
+  background-color: #4CAF50;
+}
+
+#start {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 42px;
+  text-align: center;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+p.nachalo {
+/*  padding: 12px 42px;*/
+  text-align: justify;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+/* margin: 4px 2px;
+  cursor: pointer;*/
+}
+
+#next {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#back {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#startagain {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#div1 {
+  height: auto;
+}
+
+#div2 {
+  height: auto;
+}
+  .r{font-size:large;font-color:red}
+  .test{
+ padding: 10px;
+ margin: 10px 2px 10px 2px;
+ text-align: center; 
+ background-color:#FFFFFF;
+ font-size:medium
+  }
+  
+
+    .ili {
+ padding: 0;
+ margin: 0;
+ text-align: center; 
+ font-size:medium
+
+  }
+  
+  input[type=radio] {
+    display:none; 
+    margin:10px;;
+ font-size:medium
+}
+input[type=radio] + label {
+		display:block;
+		margin:10 px;
+		 padding: 10px;
+		width: 200 px; 
+		color: #000000;
+		/*color: #0000cc;*/
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		font-size: 16px;
+		background-color: #DCF8C6;
+		border: 1px solid #ccc;
+		border-radius: 25px;
+		border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+		border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+		border-bottom-color: #b3b3b3;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	}
+
+input[type=radio]:hover + label {
+		   background-image: none;
+		outline: 0;
+		-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+		-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+		box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+
+			}
+			
+input[type=radio]:checked + label {
+		   background-image: none;
+		outline: 0;
+				color: #FFFFFF;
+
+		-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.20),0 1px 2px rgba(0,0,0,0.08);
+		-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.20),0 1px 2px rgba(0,0,0,0.08);
+		box-shadow: inset 0 2px 4px rgba(0,0,0,0.20),0 1px 2px rgba(0,0,0,0.08);
+			background-color:#4CAF50;}
+
+
+
+.red{color:#FF0000}

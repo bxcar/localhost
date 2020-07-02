@@ -16,7 +16,12 @@
         display: none !important;
     }
 
-    #profile_view_photo_img {
+    .bl_img.trans {
+
+    }
+
+    #profile_view_photo_img,
+    #profile_view_photo > img {
         max-height: 85%;
         /*margin-top: 0;*/
         /*min-height: 85%;*/
@@ -39,6 +44,62 @@
         }
     }
 </style>
+
+<script>
+    function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+        if (begin == -1) {
+            begin = dc.indexOf(prefix);
+            if (begin != 0) return null;
+        }
+        else
+        {
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
+        }
+        // because unescape has been deprecated, replaced with decodeURI
+        //return unescape(dc.substring(begin + prefix.length, end));
+        return decodeURI(dc.substring(begin + prefix.length, end));
+    }
+
+    var observeDOM = (function(){
+        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+        return function( obj, callback ){
+            if( !obj || !obj.nodeType === 1 ) return; // validation
+
+            if( MutationObserver ){
+                // define a new observer
+                var obs = new MutationObserver(function(mutations, observer){
+                    callback(mutations);
+                })
+                // have the observer observe foo for changes in children
+                obs.observe( obj, { childList:true, subtree:true });
+            }
+
+            else if( window.addEventListener ){
+                obj.addEventListener('DOMNodeInserted', callback, false);
+                obj.addEventListener('DOMNodeRemoved', callback, false);
+            }
+        }
+    })();
+
+    // Observe a specific DOM element:
+    observeDOM( document.querySelector('body'), function(m){
+        $('.tip_confirm .btn_done').click(function () {
+            var cookie_check = getCookie("spotlight_f_activated");
+            if (cookie_check == null) {
+                // do cookie doesn't exist stuff;
+                document.cookie = "spotlight_f_activated=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            }
+        });
+    });
+</script>
 {spotlight}
 {users_list}
 {footer}

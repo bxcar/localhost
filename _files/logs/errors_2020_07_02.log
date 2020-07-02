@@ -1,0 +1,26 @@
+2020-07-02 08:37:15
+User_id: 4
+Error: E_NOTICE
+URL: http://localhost/m/upgrade.php?action=refill_credits
+File: C:\OSPanel\domains\localhost\m\upgrade.php
+Line: 283
+Message: Undefined variable: features
+
+Call stack:
+
+File: C:\OSPanel\domains\localhost\_include\lib\block.php (Line: 283)
+Class: CGold
+Function: parseBlock
+
+File: C:\OSPanel\domains\localhost\_include\core\main_close.php (Line: 19)
+Class: CHtmlBlock
+Function: parse
+
+File: C:\OSPanel\domains\localhost\m\_include\core\main_close.php (Line: 10)
+Function: include
+
+File: C:\OSPanel\domains\localhost\m\upgrade.php (Line: 345)
+Function: include
+
+---------
+

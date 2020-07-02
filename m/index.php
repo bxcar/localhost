@@ -7,6 +7,18 @@ It can be found at http://www.chameleonsocial.com/license.doc
 
 This notice may not be removed from the source code. */
 
+if(!isset($_COOKIE['_localhost_set_language_mobile'])) {
+    setcookie(
+        "_localhost_set_language_mobile",
+        "russian",
+        time() + (10 * 365 * 24 * 60 * 60),
+        '/'
+    );
+    header('Location: /m/index.php');
+}
+
+
+
 include('./_include/core/pony_start.php');
 if ($g_user['user_id'] > 0 and !isset($gc) and get_param("cmd", "") != "logout") redirect(Common::getHomePage());
 

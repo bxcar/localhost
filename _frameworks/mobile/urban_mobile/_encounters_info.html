@@ -39,6 +39,11 @@
         margin-bottom: 2px;
     }
 
+    #bl_tinder_btn_left,
+    #bl_tinder_btn_right {
+        display: none !important;
+    }
+
     @media (max-width: 380px) {
         .test-circle__text {
             margin-bottom: 15px ;
@@ -54,10 +59,35 @@
         }
     }
 </style>
+<script>
+    window.onload = function () {
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutationRecord) {
+                // console.log('style changed!');
+                var element = document.getElementById('bl_tinder_btn_left'),
+                    style = window.getComputedStyle(element),
+                    opacity = style.getPropertyValue('opacity');
+                console.log(opacity);
+                if(opacity == 1) {
+                    document.getElementById('test-circle').style.display = 'none';
+                } else {
+                    function TestCircleDisplay() {
+                        document.getElementById('test-circle').style.display = 'flex';
+                    }
+
+                    setTimeout(TestCircleDisplay, 100);
+                }
+            });
+        });
+
+        var target = document.getElementById('bl_tinder_btn_left');
+        observer.observe(target, { attributes : true, attributeFilter : ['style'] });
+    }
+</script>
 <div id="profile_view_photo" class="bl_img bl_img_one" >
     <div class="no_one_found no_one_found_item hidden"><span>{l_no_one_found_please_edit_the_filter_above}</span></div>
     <img id="profile_view_photo_img" onload="$(this).removeClass('hidden')" src="{photo_cur}" class="hidden">
-    <div class="test-circle">
+    <div class="test-circle" id="test-circle">
         <span class="test-circle__text">Ожидаемое развитие ваших отношений<span> – </span></span>
         <div class="test-circle__circle">
             <span>70-</span><span>95%</span>

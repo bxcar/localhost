@@ -465,7 +465,7 @@ white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; wo
 .bl_filter_choose ul{ margin: 0 0 13px; padding: 0; float: left; width: 100%; }
 .bl_filter_choose ul li{ margin: 0; padding: 0; height: 79px; float: left; text-align: center; }
 .bl_filter_choose ul li a{ display: block; background-color: #405763; color: #fff; border-top: 1px solid #577483; text-align: center; border-bottom: 1px solid #2f4049; margin: 0 13px 0 0; height: 75px; padding: 4px 0 0; border-radius: 3px; }
-.bl_filter_choose ul li.selected a{ position: relative; background-color: #2aa1a1; border-top: 1px solid #3ed1d2; border-bottom: 1px solid #1f7878; }
+.bl_filter_choose ul li.selected a{ position: relative; background-color: #279046; border-top: 1px solid #22B14C; border-bottom: 1px solid #22B14C; }
 .bl_filter_choose ul li a span.vblock{ height: 57px; vertical-align: middle; display: inline-block; }
 .bl_filter_choose ul li a span.vblock_pic{ height: 57px; display: table-cell; vertical-align: middle; }
 .bl_filter_choose ul li a span.signature{ display: block; font-size: 12px; line-height: 14px; }
@@ -480,7 +480,7 @@ white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; wo
 .bl_settings ul.list{ margin: 0; padding: 0; }
 .bl_settings.filter select{ width: 100%; }
 .bl_settings ul.list li{ margin: 0 0 9px; padding: 0; }
-.bl_settings ul.list li a{ display: block; line-height: 16px; color: #fff; background: #22B14C; text-shadow: -1px -1px 0 #29363e; border-radius: 3px; border-top: 1px solid #22B14C; border-bottom: 1px solid #22B14C; height: 29px; /*line-height: 28px;*/ cursor: pointer; text-align: center; }
+.bl_settings ul.list li a{ display: block; line-height: 16px; color: #fff; background: #279046; text-shadow: -1px -1px 0 #29363e; border-radius: 3px; border-top: 1px solid #22B14C; border-bottom: 1px solid #22B14C; height: 29px; /*line-height: 28px;*/ cursor: pointer; text-align: center; }
 .bl_settings ul.list li a:before { content: ""; display: inline-block; min-height: inherit; height: 100%; vertical-align: middle; }
 .bl_settings ul.list li a:active{ background: #a41717; border-top: 1px solid #d62625; border-bottom: 1px solid #7b1111; }
 .bl_settings ul.list li a .loader_to_settings{ position: relative; display: inline-block !important; margin: 0; right: -5px !important; left: none; /*top: -5px;*/ bottom: none; height: 19px; width: auto; }
@@ -709,7 +709,7 @@ cursor: pointer;
 .bl_message_one .item .message .msg div.right.messages_gift{ padding: 0 5px 3px 5px; }
 .bl_message_one .item .message .msg div.right.messages_gift .gift .txt{ padding-right: 5px; }
 
-.bl_message_one .item .message .msg .left{ background: #269191; text-shadow: -1px -1px 0 #196161; border-top: 1px solid #38bcbd; border-bottom: 1px solid #1c6c6c; float: left; margin: 1px 60px 14px 0; }
+.bl_message_one .item .message .msg .left{ /*background: #269191;*/ text-shadow: -1px -1px 0 #196161; /*border-top: 1px solid #38bcbd; border-bottom: 1px solid #1c6c6c;*/ float: left; margin: 1px 60px 14px 0; }
 .bl_message_one .item .message .msg .left.left_writing{ background: none; border:none; float: left; margin: -6px 60px 5px 0; }
 
 .bl_message_one .item .message .msg .right{ /*background: #9f2626;*/ text-shadow: -1px -1px 0 #6b1919; /*border-top: 1px solid #cf3a39; border-bottom: 1px solid #761c1c;*/ float: right; margin: 1px 0 14px 60px;  }
