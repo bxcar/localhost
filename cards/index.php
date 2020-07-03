@@ -182,6 +182,8 @@ $card_4 = mysqli_fetch_assoc($result4);
 </head>
 <body> <!--  <h1>Swipi Card Stack!</h1>-->
 <rg-swipi-cards stack-offset-y="0.3">
+    <?php
+    if(!isset($_GET['card_last'])) { ?>
     <rg-swipi-card left-color="#BB377D" right-color="#C9FFBF"><h2>1 из 4</h2>
         <p class="card-text"><?= $card_1['text'] ?></p>
         <div class="right-arrow"><img src="./img/right-arrow.png"></div>
@@ -194,12 +196,14 @@ $card_4 = mysqli_fetch_assoc($result4);
         <p class="card-text"><?= $card_3['text'] ?></p>
         <div class="right-arrow"><img src="./img/right-arrow.png"></div>
     </rg-swipi-card>
+    <?php  }
+    ?>
     <div class="last-swipe-card" left-color="#BB377D" right-color="#C9FFBF">
         <div class="card" style="box-sizing: content-box;"><h2>4 из 4</h2>
             <p class="card-text"><?= $card_4['text'] ?></p>
             <div class="last-buttons">
                 <button onclick="window.location.href = '/m'" class="last-button_later">Позже</button>
-                <button class="last-button_start">Начать</button>
+                <button onclick="window.location.href = '/test'" class="last-button_start">Начать</button>
             </div>
         </div>
     </div> <!--<rg-swipi-card left-color="red" right-color="green">

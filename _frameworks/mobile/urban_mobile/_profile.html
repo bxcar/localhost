@@ -32,6 +32,53 @@
         photos.setPosition(photos.photosInfo[photoCurId].offset);
     })
 </script>
+<script>
+    function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+        if (begin == -1) {
+            begin = dc.indexOf(prefix);
+            if (begin != 0) return null;
+        }
+        else
+        {
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
+        }
+        // because unescape has been deprecated, replaced with decodeURI
+        //return unescape(dc.substring(begin + prefix.length, end));
+        return decodeURI(dc.substring(begin + prefix.length, end));
+    }
+</script>
+<style>
+    .test_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 50px;
+        background: #279046 !important;
+        border-radius: 50px;
+        right: -100% !important;
+        color: #fff;
+        margin-right: 40px;
+    }
+
+    .name-custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bl_info_photo_top .name .status {
+        left: auto;
+        right: 100px;
+    }
+</style>
 
 <div id="profile_view_photo" class="bl_img bl_img_one" title="{a_swipe_to_get_to_the_next_photo}" >
     <img id="photo_img_cur" src="" class="hidden" onload="$(this).removeClass('hidden')">
@@ -67,7 +114,15 @@
 
 <div class="bl_info_photo_top">
     <div id="profile_view_photo_position" style="opacity: 0;" class="count"><span></span></div>
-    <div class="name">
+    <div class="name name-custom">
+        <script>
+            var test_done = getCookie("test_done");
+            if (test_done == null) {
+                document.write('<a target="_blank" class="test_button" href="/test">Узнать мой психологический портрет</a>');
+            } else {
+                document.write('<a target="_blank" class="test_button" href="/test/result">Мой психологический портрет</a>');
+            }
+        </script>
         <!-- begin_status_online -->
         <div class="status online"></div>
         <!-- end_status_online -->

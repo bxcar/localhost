@@ -5,7 +5,7 @@ foreach($_GET as $param => $value){
    if(!in_array($value, $allow)){
         header("HTTP/1.0 404 Not Found");
         exit;
-    } 
+    }
 }
 //конец проверки
 
@@ -94,7 +94,8 @@ $dual = 'm'.$dual;
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $extra = $tip.$dual.'.html';
-header("Location: http://$host$uri/$extra");
+//header("Location: http://$host$uri/$extra");
+header("Location: http://$host$uri/result");
 exit;
 }
 //конец подсчета типа и дуала
